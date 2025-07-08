@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out source code...'
-                checkout scm
+               git branch: 'main', credentialsId: 'gitpipe', url: 'https://github.com/magesh-vvs/experiment.git'
             }
         }
 
